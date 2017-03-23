@@ -33,6 +33,9 @@ Configure the application to use the middleware when processing requests. The sa
 
 The Response Caching Middleware only caches 200 (OK) server responses. Any other responses, including [error pages](xref:fundamentals/error-handling), will be ignored by the middleware.
 
+>[!WARNING]
+> Responses containing content for authenticated clients must be marked as not cacheable to prevent the middleware from storing and serving those responses.
+
 ## Options
 The middleware offers two options for controlling response caching.
 
